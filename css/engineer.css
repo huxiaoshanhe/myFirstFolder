@@ -1,0 +1,314 @@
+.nav .engineer {
+	background: #337ab7;
+}
+.nav .engineer a{
+	color:#fff;
+}
+.search {
+	width:920px;
+	margin:0 auto;
+	height:36px;
+	position: relative;
+}
+.search .txt {
+	width:350px;
+	height:32px;
+	border: 1px solid #337ab7;
+	text-indent: 5px;
+}
+.search .txt:focus {
+	outline: none;
+}
+.search .btn {
+	width: 60px;
+	background: #337ab7;
+	height: 34px;
+	border: 1px solid #337ab7;
+	position: absolute;
+	top:0;left:350px;
+	color:#fff;
+	cursor: pointer;
+}
+
+
+.basic_info {
+	width:600px;
+	font-size: 12px;
+	margin-left: 20px;
+}
+.basic_info th {
+	padding:8px 0;
+	text-align: left;
+}
+.basic_info .th1 {
+	width:100px;
+}
+.basic_info .th1 .title {
+	font-size: 18px;
+	font-weight: bold;
+}
+.basic_info .th2 {
+	width:200px;
+}
+.basic_info td {
+	padding:8px 0;
+}
+
+.manager {
+	width:900px;
+	font-size: 12px;
+	margin-left: 20px;
+}
+.manager td {
+	padding:5px 0;
+}
+.manager .td1 {
+	width: 110px;
+}
+.manager .td2 {
+	width: 190px;
+}
+.manager .td3 {
+	width: 110px;
+}
+.manager .td4 {
+	width: 190px;
+}
+.manager .td5 {
+	width: 110px;
+}
+.manager .td6 {
+	width: 190px;
+}
+.manager td input.txt {
+	border:1px solid #ddd;
+	width:175px;
+	height:26px;
+	text-indent: 5px
+}
+.manager td input:focus {
+	outline: none;
+}
+
+.building {
+	width:900px;
+	font-size:12px;
+	margin-left: 20px;
+}
+.building th {
+	text-align: left;
+	padding: 8px 0;
+}
+.building td {
+	padding: 8px 0;
+}
+.building .td1 {
+	width: 110px;
+}
+.building .td2 {
+	width: 190px;
+}
+.building .td3 {
+	width: 110px;
+}
+.building .td4 {
+	width: 190px;
+}
+.building .td5 {
+	width: 110px;
+}
+.building .td6 {
+	width: 190px;
+}
+.building td input.txt {
+	border:1px solid #ddd;
+	width:175px;
+	height:26px;
+	text-indent: 5px
+}
+.building td input.txt:focus {
+	outline: none;
+}
+.building .fee-label {
+	padding:0 20px;
+}
+
+.material {
+	width:600px;
+	font-weight: bold;
+	font-size:12px;
+	margin: 20px 0 20px 20px;
+}
+.material .toEdit {
+
+}
+
+.material-list {
+	width:600px;
+	font-size:12px;
+	margin-left: 20px;
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+.material-list th {
+	font-weight: normal;
+	padding:8px 0;
+	width:150px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.material-list td {
+	padding:8px 0;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.basic_info .btn, .building .btn  {
+	border:1px solid #337ab7;
+	width:100px;
+	height: 26px;
+	cursor: pointer;
+	background: #337ab7;
+	color:#fff;
+}
+.building .btns .btn {
+	margin-right: 15px;
+}
+
+
+.material-input-list {
+	margin-left: 20px;
+	font-size:12px;
+	width: 640px;
+}
+.material-input-list td {
+	padding:8px 0;
+}
+.material-input-list .td1 {
+	width:60px;
+	text-align: center;
+}
+.material-input-list .td2 {
+	width:100px;
+}
+.material-input-list td input.txt {
+	width:100px;
+	height:26px;
+	border:1px solid #ddd;
+	text-indent: 5px;
+}
+.material-input-list td input.txt:focus {
+	outline: line;
+}
+.addBtn {
+	margin:20px 0 20px 20px;
+}
+.addBtn .btn {
+	width:100px;
+	height:26px;
+	cursor: pointer;
+	border:1px solid #337ab7;
+	background: #337ab7;
+	color:#fff;
+}
+.addBtn .btn:focus {
+	outline: none;
+}
+
+.planing {
+	color:#da4f49;
+}
+.working {
+	color:#faa732;
+}
+.finish {
+	color:#006dcc;
+}
+.tested {
+	color:#5bb75b;
+}
+.accountColsed {
+	color:#666;
+}
+.period i.ico {
+	display: none;
+	width:15px;
+	height:15px;
+	background: url(../images/del-icon.png);
+	position: relative;
+	top:3px;
+	cursor: pointer;
+}
+.period.on i.ico {
+	display: inline-block;
+}
+.period.on .selectedPeriod{
+	color:#f00;
+}
+
+
+.findArtisan {
+	position: relative;
+}
+.findArtisan .artisanList {
+	position: absolute;
+	width:175px;
+	border:1px solid #ddd;
+	top:33px;
+	left:0;
+	display: none;
+	z-index: 99;
+	background: #fff;
+}
+.findArtisan .artisanList li {
+	text-indent: 5px;
+	height:26px;
+	line-height:26px;
+	cursor: pointer;
+}
+.findArtisan .artisanList li:hover {
+	background: #f5f5f5;
+}
+
+
+.red{
+	color:#f00;
+}
+.btn.addArtisans {
+	width:90px;
+	background:#00A1CB;
+	border:1px solid #00A1CB;
+	border-radius: 3px;
+}
+.btn.btn-remove {
+	padding:3px 10px;
+	background: #faa732;
+	border:1px solid #faa732;
+}
+.btn.btn-delete {
+	background: #faa732;
+	border:1px solid #faa732;
+}
+
+.findManager {
+	position: relative;
+}
+.findManager .managerList {
+	position: absolute;
+	width:175px;
+	border:1px solid #ddd;
+	top:33px;
+	left:0;
+	display: none;
+	z-index: 99;
+	background: #fff;
+}
+.findManager .managerList li {
+	text-indent: 5px;
+	height:26px;
+	line-height:26px;
+	cursor: pointer;
+}
+.findManager .managerList li:hover {
+	background: #f5f5f5;
+}

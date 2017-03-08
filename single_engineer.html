@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单工程管理</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/engineer.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/jedate/jedate.min.js"></script>
+	<script type="text/javascript" src="js/single_engineer.js"></script>
+</head>
+<body>
+	<div class="top"></div>
+	<script type="text/javascript">$('.top').load('common/header.html')</script>
+	
+	<div class="main">	
+		<form accept="" method="post" id="submitEngineer">
+		<table class="basic_info">
+			<tr>
+				<th class="th1"><span class="title">工程编辑</span></th>
+				<th class="th2"></th>
+				<th class="th1"></th>
+				<th class="th2"><input type="submit" value="完成编辑" class="btn"></th>
+			</tr>
+			<tr>
+				<td>项目编号：</td>
+				<td colspan="3">1234</td>
+			</tr>
+			<tr>
+				<td>物业地址：</td>
+				<td>芍药居北里</td>
+				<td>总费用：</td>
+				<td>￥100 <span>已结算</span></td>
+			</tr>
+			<tr>
+				<td>户型：</td>
+				<td>两室两厅一卫一厨</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>项目类型：</td>
+				<td>整装/精装</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<table class="manager">
+			<tr>
+				<td class="td1">项目经理：</td>
+				<td class="td2"><input type="text" class="txt" name="project_manager"></td>
+				<td class="td3"></td>
+				<td class="td4"></td>
+				<td class="td5"></td>
+				<td class="td6"></td>
+			</tr>
+			<tr>
+				<td>计划开工日期：</td>
+				<td><input type="text" class="txt" name="plan_start" id="plan_start" readonly="readonly"></td>
+				<td> 计划完成日期：</td>
+				<td><input type="text" class="txt" name="plan_end" id="plan_end" readonly="readonly"></td>
+				<td> 计划天数：<span class="planDays"></span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>实际开工日期：</td>
+				<td><input type="text" class="txt" name="real_start" id="real_start" readonly="readonly"></td>
+				<td> 实际完成日期：</td>
+				<td><input type="text" class="txt" name="real_end" id="real_end" readonly="readonly"></td>
+				<td> 实际天数：<span class="realDays"></span></td>
+				<td></td>
+			</tr>
+		</table>
+
+		<table class="building">
+			<tr>
+				<th colspan="6">
+					施工阶段：
+				</th>
+			</tr>
+			<tr>
+				<td class="td1">工种：</td>
+				<td class="td2">
+					<select name="worker_type">
+						<option value="0">选择</option>
+						<option value="1">工种一</option>
+						<option value="2">工种二</option>
+					</select>
+				</td>
+				<td class="td3"></td>
+				<td class="td4"></td>
+				<td class="td5"></td>
+				<td class="td6"></td>
+			</tr>
+			<tr>
+				<td>计划开工日期：</td>
+				<td><input type="text" class="txt" name="building_plan_start" id="building_plan_start" readonly="readonly"></td>
+				<td>计划完成日期：</td>
+				<td><input type="text" class="txt" name="building_plan_end" id="building_plan_end" readonly="readonly"></td>
+				<td>计划天数：<span class="bPlanDays"></span></td>
+				<td></td>
+			</tr>			
+			<tr>
+				<td>实际开工日期：</td>
+				<td><input type="text" class="txt" name="building_real_start" id="building_real_start" readonly="readonly"></td>
+				<td>实际完成日期：</td>
+				<td><input type="text" class="txt" name="building_real_end" id="building_real_end" readonly="readonly"></td>
+				<td>实际天数：<span class="bRealDays"></span></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>工匠：</td>
+				<td class="findArtisan">
+					<input type="text" class="txt" name="artisan_name" onkeyup="getArtisan(this)">
+					<ul class="artisanList">
+						<li onclick="selectArtisan('工匠一',this)">工匠一</li>
+						<li onclick="selectArtisan('工匠二',this)">工匠二</li>
+						<li onclick="selectArtisan('工匠三',this)">工匠三</li>
+					</ul>
+				</td>
+				<td>费用：</td>
+				<td><input type="text" class="txt" name="fee"></td>
+				<td></td>
+			</tr>
+			<tr class="insertArtisan">
+				<td colspan="6">
+					<input type="button" value="添加工匠" onclick="addArtisan()" class="btn addArtisans">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" class="btns">
+					<input type="button" value="发送短信" class="btn">
+					<input type="button" value="验收" class="btn">
+				</td>
+			</tr>
+			<tr class="insertArtisanType">
+				<td colspan="6" class="btns">
+					<input type="button" value="增加工种" onclick="addArtisanType()" class="btn">
+				</td>
+			</tr>
+		</table>
+		</form>
+
+		<div class="material">材料：<a href="javascript:;" class="f-right toEdit">编辑材料</a></div>
+		<table class="material-list">
+			<tr>
+				<th>材料名</th>
+				<th>单位</th>
+				<th>数量</th>
+				<th>总价</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>		
+</body>
+</html>

@@ -1,0 +1,105 @@
+.nav .artisan {
+	background: #337ab7;
+}
+.nav .artisan a {
+	color:#fff;
+}
+
+.artisan_info {
+	width:400px;
+	margin:20px 0 10px 40px;
+	font-size:12px;
+}
+.artisan_info td {
+	padding:8px 0;
+}
+.artisan_info .td1 {
+	width:80px;
+}
+.artisan_info .td2 {
+	width:220px;
+}
+.artisan_info .td3 {
+	width:100px;
+}
+.artisan_info .td3 .btn {
+	width:100px;
+	height:26px;
+	border: 1px solid #337ab7;
+	background: #337ab7;
+	line-height: 26px;
+	color:#fff;
+	display: block;
+	text-align: center;
+}
+
+.artisanEditTitle {
+	width:300px;
+	margin:20px 0 0 40px;
+}
+.artisanEditTitle .title {
+	font-size:18px;
+	font-weight: bold;
+}
+.artisanEditTitle .btn {
+	width:80px;
+	height:26px;
+	border:1px solid #337ab7;
+	background: #337ab7;
+	color: #fff;
+	cursor: pointer;
+}
+.artisanEdit {
+	width:300px;
+	font-size: 12px;
+	margin:20px 0 0 40px;
+}
+.artisanEdit td {
+	padding:8px 0;
+}
+.artisanEdit .td1 {
+	width:80px;
+}
+.artisanEdit .td2 {
+	width:220px;
+}
+.artisanEdit td .txt {
+	width:220px;
+	height:26px;
+	border: 1px solid #ddd;
+	text-indent: 5px;
+}
+.artisanEdit td .txt:focus {
+	outline: none;
+}
+.artisanEdit td .txt.short {
+	width:80px;
+}
+.artisanEdit td select {
+	width:60px;
+}
+.artisanEdit td select:focus {
+	outline: none;
+}
+
+
+.search .btn.addManager  {
+	width:80px;
+}
+
+
+.level i.ico,.type i.ico {
+	display: none;
+	width:15px;
+	height:15px;
+	background: url(../images/del-icon.png);
+	position: relative;
+	top:3px;
+	cursor: pointer;
+}
+.level.on i.ico,.type.on i.ico {
+	display: inline-block;
+}
+.level.on .selectedLevel,.type.on .selectedType{
+	color:#f00;
+}

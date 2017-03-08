@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>工匠管理</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/artisan.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+	<div class="top"></div>
+	<script type="text/javascript">$('.top').load('common/header.html')</script>
+	<div class="main">
+		<div class="search">
+			<form action="" method="get" id="search">
+				<input type="text" name="keywords" class="txt" />
+				<input type="hidden" name="type" />
+				<input type="hidden" name="level" />
+				<input type="submit" value="搜索" class="btn" />
+			</form>
+			<a class="addBtn btn">添加工匠</a>
+		</div>
+
+		<table class="list" cellpadding="0" cellspacing="0">
+			<tr>
+				<th>工匠编号</th>
+				<th>工匠姓名</th>
+				<th>手机号</th>
+				<th class="type">
+					<span class="selectedType">工种</span>
+					<i class="ico"></i>
+					<ul>
+						<li onclick="selectType(1)">工种1</li>
+						<li onclick="selectType(2)">工种2</li>
+						<li onclick="selectType(3)">工种3</li>
+					</ul>
+				</th>
+				<th class="level">
+					<span class="selectedLevel">等级</span>
+					<i class="ico"></i>
+					<ul>
+						<li onclick="selectLevel(1)">高级</li>
+						<li onclick="selectLevel(2)">中级</li>
+						<li onclick="selectLevel(3)">普通</li>
+					</ul>
+				</th>
+				<th>计划项目</th>
+				<th>在施工项目</th>
+				<th>已完成项目</th>
+				<th>已结算项目</th>
+				<th>已支付项目</th>
+				<th>支付</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="#">支付</a></td>
+			</tr>
+		</table>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function() {
+		var level = urlGet('level');
+		var type = urlGet('type');
+		var keywords = urlGet('keywords');
+		$('#search input[name="level"]').val(level);
+		$('#search input[name="type"]').val(type);
+		$('#search input[name="keywords"]').val(keywords);
+		switch(level){
+			case '1':
+			$('.selectedLevel').text('高级');
+			$('.level').addClass('on');
+			break;
+			case '2':
+			$('.selectedLevel').text('中级');
+			$('.level').addClass('on');
+			break;
+			case '3':
+			$('.selectedLevel').text('普通');
+			$('.level').addClass('on');
+			break;
+			default:
+			$('.selectedLevel').text('等级');
+			if($('.level').hasClass('on')) {
+				$(this).removeClass('on');
+			}
+			break;
+		}
+
+		$('.level .ico').click(function() {
+			$('#search input[name="level"]').val('');
+			$('#search').submit();
+		});
+
+		switch(type){
+			case '1':
+			$('.selectedType').text('工种1');
+			$('.type').addClass('on');
+			break;
+			case '2':
+			$('.selectedType').text('工种2');
+			$('.type').addClass('on');
+			break;
+			case '3':
+			$('.selectedType').text('工种3');
+			$('.type').addClass('on');
+			break;
+			default:
+			$('.selectedType').text('工种');
+			if($('.type').hasClass('on')) {
+				$(this).removeClass('on');
+			}
+			break;
+		}
+
+		$('.type .ico').click(function() {
+			$('#search input[name="type"]').val('');
+			$('#search').submit();
+		});
+	});
+
+	function selectType(num) {
+		$('#search input[name="type"]').val(num);
+		$('#search').submit();
+	}
+
+	function selectLevel(num) {
+		$('#search input[name="level"]').val(num);
+		$('#search').submit();
+	}
+</script>
+</html>

@@ -1,0 +1,89 @@
+.nav .report {
+	background: #337ab7;
+}
+.nav .report a {
+	color:#fff;
+}
+.weekReport,.monthReport {
+	width:920px;
+	margin:20px auto;
+	font-size:12px;
+}
+.weekReport .title .name,.monthReport .title .name{
+	font-size:18px;
+	font-weight: bold;
+}
+.weekReport .title .btn,.monthReport .title .btn {
+	background: #337ab7;
+	border: 1px solid #337ab7;
+	padding:3px 10px;
+	color: #fff;
+	cursor: pointer;
+}
+.weekReport .title .dates {
+	margin: 0 20px;
+}
+.weekReport .title .dates .txt {
+	border:none;
+	background: #ff0;
+	width:60px;
+}
+.monthReport .title .year {
+	margin: 0 20px;
+}
+.weekReport .weekReportTable {
+	width:600px;
+	border-left:1px solid #ddd;
+	border-top: 1px solid #ddd;
+	margin: 20px 0;
+}
+.weekReport .weekReportTable th {
+	border-right:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding:8px 0;
+	font-weight: normal;
+}
+.weekReport .weekReportTable td {
+	border-right:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding:8px 0;
+	text-align: center;
+}
+
+.monthReport .monthReportTable {
+	width:920px;
+	border-left:1px solid #ddd;
+	border-top: 1px solid #ddd;
+	margin: 20px 0;
+}
+.monthReport .monthReportTable th {
+	border-right:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding:8px 0;
+	font-weight: normal;
+}
+.monthReport .monthReportTable td {
+	border-right:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding:8px 0;
+	text-align: center;
+}
+
+
+.jedatebox .jedayy li {
+    width: 32%;
+    float: left;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+}
+.jedatebox .jedayy li.action {
+    background: #00A1CB;
+    color: #fff;
+}
+.jedatebot {
+	width:100%;
+}
+.jedatebot .jedatebtn span {
+	width:31%;
+}

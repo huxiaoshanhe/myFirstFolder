@@ -1,0 +1,75 @@
+.nav .project {
+	background: #337ab7;
+}
+.nav .project a{
+	color:#fff;
+}
+
+.editProject {
+	width: 500px;
+	margin:20px 0 0 20px;
+	font-size: 12px;
+}
+.editProject th {
+	text-align: left;
+	font-size:18px;
+	padding: 10px 0;
+}
+.editProject td {
+	padding:8px 0;
+}
+.editProject td.td1 {
+	width:80px;
+}
+.editProject td.td2 {
+	width:420px;
+}
+.editProject td .txt {
+	width:300px;
+	height:26px;
+	border: 1px solid #ddd;
+	text-indent: 5px;
+	margin-right: 10px;
+}
+.editProject td .txt:focus {
+	outline: line;
+}
+.editProject td .txt.short {
+	width:100px;
+}
+.editProject td span {
+	margin-right:8px;
+}
+.editProject td select {
+	border: 1px solid #ddd;
+	margin-right: 3px;
+	width:65px;
+	text-align: center;
+}
+.editProject td .btn {
+	border: 1px solid #337ab7;
+	background: #337ab7;
+	width:80px;
+	font-size: 12px;
+	height:26px;
+	color:#fff;
+	cursor: pointer;
+}
+
+.projectType i.ico,.projectLevel i.ico {
+	display: none;
+	width:15px;
+	height:15px;
+	background: url(../images/del-icon.png);
+	position: relative;
+	top:3px;
+	cursor: pointer;
+}
+.projectType.on i.ico,.projectLevel.on i.ico {
+	display: inline-block;
+}
+.projectType.on .selectedType,.projectLevel.on .selectedLevel{
+	color:#f00;
+}
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单项目管理</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/project.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/single_project.js"></script>
+</head>
+<body>
+	<div class="top"></div>
+	<script type="text/javascript">$('.top').load('common/header.html')</script>
+	<div class="main">
+		<form action="" method="post" id="projectSubmit">
+			<table cellspacing="0" cellpadding="0" class="editProject">
+				<tr>
+					<th colspan="2">项目编辑：</th>
+				</tr>
+				<tr>
+					<td class="td1">项目编号：</td>
+					<td class="td2"></td>
+				</tr>
+				<tr>
+					<td class="td1">物业地址：</td>
+					<td class="td2">
+						<input type="text" name="address" class="txt">
+					</td>
+				</tr>
+				<tr>
+					<td class="td1">户型：</td>
+					<td class="td2">
+						<span>
+							<select name="room">
+								<option value="0">选择</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>室
+						</span>
+						<span>
+							<select name="hall">
+								<option value="0">选择</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>厅
+						</span>
+						<span>
+							<select name="washroom">
+								<option value="0">选择</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>卫
+						</span>
+						<span>
+							<select name="kitchen">
+								<option value="0">选择</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+							</select>厨
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td1">面积：</td>
+					<td class="td2">
+						<input type="text" class="txt short" name="area">平米
+					</td>
+				</tr>
+				<tr>
+					<td class="td1">业主姓名：</td>
+					<td class="td2">
+						<input type="text" class="txt short" name="host">
+					</td>
+				</tr>
+				<tr>
+					<td class="td1">业主电话：</td>
+					<td class="td2">
+						<input type="text" class="txt" name="mobile">
+					</td>
+				</tr>
+				<tr>
+					<td class="td1">身份证：</td>
+					<td class="td2">
+						<input type="text" class="txt" name="id_card">
+					</td>
+				</tr>
+				<tr>
+					<td class="td1">项目类型：</td>
+					<td class="td2">
+						<select name="project_type">
+							<option value="0">选择</option>
+							<option value="1">整装</option>
+							<option value="2">公寓</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="td1">项目级别：</td>
+					<td class="td2">
+						<select name="project_level">
+							<option value="0">选择</option>
+							<option value="1">豪装</option>
+							<option value="2">精装</option>
+							<option value="3">工装</option>
+							<option value="4">修复</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" class="btn" value="完成编辑">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

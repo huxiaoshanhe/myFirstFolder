@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>工匠个人信息页</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/artisan.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/artisan_edit.js"></script>
+</head>
+<body>
+	<div class="top"></div>
+	<script type="text/javascript">$('.top').load('common/header.html')</script>
+	<div class="main">
+		<form id="artisanEditSubmit">
+			<div class="artisanEditTitle">
+				<span class="title">工匠编辑：</span>
+				<input type="submit" class="btn f-right" value="完成编辑">
+			</div>
+			<table class="artisanEdit" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="td1">姓名：</td>
+					<td class="td2"><input type="text" class="txt short" name="name"></td>
+				</tr>
+				<tr>
+					<td>身份证：</td>
+					<td><input type="text" class="txt" name="id_card"></td>
+				</tr>
+				<tr>
+					<td>手机号：</td>
+					<td><input type="text" class="txt" name="mobile"></td>
+				</tr>
+				<tr>
+					<td>工种：</td>
+					<td>
+						<select name="worker_type">
+							<option value="">选择</option>
+							<option value="">工种一</option>
+							<option value="">工种二</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>技能评级：</td>
+					<td>
+						<select name="skill_level">
+							<option value="">选择</option>
+							<option value="">高级</option>
+							<option value="">中级</option>
+							<option value="">普通</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>定价:</td>
+					<td><input type="text" class="txt short" name="fee"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

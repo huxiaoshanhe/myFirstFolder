@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>材料管理</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/engineer.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/material_manager.js"></script>
+</head>
+<body>
+	<div class="top"></div>
+	<script type="text/javascript">$('.top').load('common/header.html')</script>
+	
+	<div class="main">
+		<form>	
+			<table class="basic_info">
+				<tr>
+					<th class="th1">工程编辑</th>
+					<th class="th2"></th>
+					<th class="th1"></th>
+					<th class="th2"><input type="button" value="完成编辑" class="btn"></th>
+				</tr>
+				<tr>
+					<td>项目编号：</td>
+					<td colspan="3">1234</td>
+				</tr>
+				<tr>
+					<td>物业地址：</td>
+					<td>芍药居北里</td>
+					<td>总费用：</td>
+					<td>￥100 <span>已结算</span></td>
+				</tr>
+				<tr>
+					<td>户型：</td>
+					<td>两室两厅一卫一厨</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>项目类型：</td>
+					<td>整装/精装</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<table class="material-input-list">
+				<tr>
+					<td class="td1">材料名：</td>
+					<td class="td2"><input type="text" class="txt" name="name"></td>
+					<td class="td1">单位：</td>
+					<td class="td2"><input type="text" class="txt" name="dept"></td>
+					<td class="td1">数量：</td>
+					<td class="td2"><input type="text" class="txt" name="number"></td>
+					<td class="td1">总价：</td>
+					<td class="td2"><input type="text" class="txt" name="total_price"></td>
+				</tr>
+			</table>	
+			<div class="addBtn">
+				<input type="button" class="btn" value="新增材料">
+			</div>
+		</form>
+	</div>		
+</body>
+</html>

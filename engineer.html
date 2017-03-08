@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>工程管理</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/engineer.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+	<div class="top"></div>
+	<script type="text/javascript">$('.top').load('common/header.html')</script>
+	<div class="main">
+		<div class="search">
+			<form action="" id="search" method="get">
+				<input type="text" name="keywords" class="txt" />
+				<input type="hidden" name="period" />
+				<input type="submit" value="搜索" class="btn" />
+			</form>
+		</div>
+
+			<table cellspacing="0" cellpadding="0" class="list">
+				<tr>
+					<th>项目编号</th>
+					<th>物业地址</th>
+					<th>项目类型</th>
+					<th>计划开工日期</th>
+					<th>实际开工日期</th>
+					<th>计划完成日期</th>
+					<th>实际完成日期</th>
+					<th class="period">
+					<span class="selectedPeriod">项目阶段</span>
+					<i class="ico"></i>
+					<ul>
+						<li onclick="selectPeriod(1)">计划</li>
+						<li onclick="selectPeriod(2)">施工中</li>
+						<li onclick="selectPeriod(3)">已完成</li>
+						<li onclick="selectPeriod(4)">已验收</li>
+						<li onclick="selectPeriod(5)">已结算</li>
+					</ul>
+					</th>
+					<th>总金额</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><span class="planing">计划</span></td>
+					<td></td>
+					<td><a href="">操作</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><span class="working">施工中</span></td>
+					<td></td>
+					<td><a href="">操作</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><span class="finish">已完成</span></td>
+					<td></td>
+					<td><a href="">操作</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><span class="tested">已验收</span></td>
+					<td></td>
+					<td><a href="">操作</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><span class="accountClosed">已结算</span></td>
+					<td></td>
+					<td><a href="">操作</a></td>
+				</tr>
+			</table>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(function() {
+		var period = urlGet('period');
+		var keywords = urlGet('keywords');
+		$('#search input[name="period"]').val(period);
+		$('#search input[name="keywords"]').val(keywords);
+		switch(period){
+			case '1':
+			$('.selectedPeriod').text('计划');
+			$('.period').addClass('on');
+			break;
+			case '2':
+			$('.selectedPeriod').text('施工中');
+			$('.period').addClass('on');
+			break;
+			case '3':
+			$('.selectedPeriod').text('已完成');
+			$('.period').addClass('on');
+			break;
+			case '4':
+			$('.selectedPeriod').text('已验收');
+			$('.period').addClass('on');
+			break;
+			case '5':
+			$('.selectedPeriod').text('已结算');
+			$('.period').addClass('on');
+			break;
+			default:
+			$('.selectedPeriod').text('项目阶段');
+			if($('.period').hasClass('on')) {
+				$(this).removeClass('on');
+			}
+			break;
+		}
+
+		$('.period .ico').click(function() {
+			$('#search input[name="period"]').val('');
+			$('#search').submit();
+		});
+	});
+
+
+	function selectPeriod(num) {
+		$('#search input[name="period"]').val(num);
+		$('#search').submit();
+	}
+</script>
+</html>
